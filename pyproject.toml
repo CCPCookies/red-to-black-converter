@@ -1,0 +1,10 @@
+[project]
+name = "carbon-red-to-black-converter"
+version = "1.0.0"
+dependencies = ["blue","trinity","audio2"]
+authors = [{name = "CCP Games", email = "contact@ccpgames.com"}]
+license = "MIT"
+readme = "README.md"
+
+[project.scripts]
+redtoblack = "redtoblack.__main__:main"
