@@ -31,7 +31,9 @@ def run(resFolderPath: str,verbose: bool, maxWorkers: int=None, maxTasksPerChild
 
     Args:
         resFolderPath (string): Base path to resources folder.
-        verbose (bool): If True will print progress information
+        verbose (bool): If True will print progress information.
+        maxWorkers (int): Maximum number of processes that can be used to execute red to black conversion.
+        maxTasksPerChild (int): The maximum number of red files a worker process can complete before it will exit and be replaced with a fresh worker process.
     """
 
     if verbose:
