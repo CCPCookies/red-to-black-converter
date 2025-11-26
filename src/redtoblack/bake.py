@@ -23,7 +23,7 @@ def _run_on_resource(resourcePath: str):
 
     return black_path
 
-def run(resFolderPath: str,verbose: bool):
+def run(resFolderPath: str,verbose: bool, maxWorkers: int=None, maxTasksPerChild: int=None):
     """
     Given a base directory for resources, 
     will convert red files to black files.
@@ -41,7 +41,7 @@ def run(resFolderPath: str,verbose: bool):
 
     filesConverted = 0
 
-    with concurrent.futures.ProcessPoolExecutor() as executor:
+    with concurrent.futures.ProcessPoolExecutor(max_workers=maxWorkers, max_tasks_per_child=maxTasksPerChild) as executor:
         futures = [executor.submit(_run_on_resource, resource) for resource in _resource_generator(resFolderPath)]
         for future in concurrent.futures.as_completed(futures):
             res = future.result()
