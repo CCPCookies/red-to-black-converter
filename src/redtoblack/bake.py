@@ -1,3 +1,5 @@
+# Copyright © 2025 CCP ehf.
+
 from redtoblack.converter import RedToBlackConverter
 import os
 import time

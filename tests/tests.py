@@ -1,3 +1,5 @@
+# Copyright © 2025 CCP ehf.
+
 import unittest
 import os
 import shutil

@@ -1,3 +1,5 @@
+# Copyright © 2025 CCP ehf.
+
 # These imports are important here even if this module does not directly use them.
 # The files being loaded contain references to objects from these modules and won't load
 # if the modules haven't been imported.
